@@ -2,7 +2,7 @@ require("dotenv").config()
 const mongoose = require("mongoose")
 mongoose.set('strictQuery', false)
 
-const connection = mongoose.connect(process.env.mongoURL)
+const connection = mongoose.connect("mongodb+srv://thiteshubham:thiteshubham@cluster0.zphu3ww.mongodb.net/auth?retryWrites=true&w=majority")
 
 const userSchema = mongoose.Schema({
     name:{type:String,required:true},
