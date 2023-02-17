@@ -21,7 +21,7 @@ userRouter.post("/login",async(req,res)=>{
         let user = await userModle.find({email:req.body.email})
         if(user.length<= 0) res.status(400).send(`user not found`)
         if(await bcrypt.compare(req.body.pass,user[0].pass)){
-            const token = jwt.sign({userid:user[0]._id},process.env.secreteKey)
+            const token = jwt.sign({userid:user[0]._id},7nexx8374yx3y44r44rx4x84x4zmdiu8z39)
             res.send({msg:`ok done`,taken:token})
         }else{res.send(`wrong pass`)}
     }catch(err){res.send(err.messege)}
