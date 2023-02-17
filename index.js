@@ -14,12 +14,12 @@ app.use("/user",userRouter)
 app.use(verify)
 app.use("/note",noteRouter)
 
-app.listen(process.env.PORT,async()=>{
+app.listen(8000,async()=>{
     try{
         await connection
         console.log(`coneccted to DB...`)
     }catch(err){
         console.log(err)
     }
-    console.log(`port ${process.env.PORT}...`)
+    console.log(`port 8000...`)
 })
